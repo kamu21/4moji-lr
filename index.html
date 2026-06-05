@@ -1,0 +1,42 @@
+<div id="start">
+    <p>正しい順序で、文字を軽くタッチしてください！</p>
+</div>
+
+<div id="game">
+    <h1></h1>
+
+    <div id="field">
+        <div id="answer-area">
+            <div class="answer">1</div>
+            <div class="answer">2</div>
+            <div class="answer">3</div>
+            <div class="answer">4</div>
+        </div>
+
+        <div id="select-area">
+            <div class="select">さ</div>
+            <div class="select">い</div>
+            <div class="select">は</div>
+            <div class="select">く</div>
+        </div>
+    </div>
+
+    <div id="btn">
+        <div class="left-btn">
+            <button onclick="Judgment()">OK</button>
+            <button onclick="showQuestion()">やり直す</button>
+        </div>
+
+        <div class="right-btn">
+            <button onclick="showQuestion()">やり直す</button>
+            <button onclick="Judgment()">OK</button>
+        </div>
+    </div>
+</div>
+
+<!-- ★これが絶対必要 -->
+<div id="next"></div>
+
+<audio controls src="https://zukisuzukibgm.com/wp-content/uploads/2024/07/Easygoing.mp3"></audio>
+
+<script src="main.js"></script>
