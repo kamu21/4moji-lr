@@ -1,0 +1,75 @@
+div.is-hidden {
+    display: none;/*ウェブページでは「display: none」というCSSを使うと、要素を非表示にできます*/
+}
+div.is-visible {
+    display: block;/*ブックマーク参照*/
+}
+body {
+    text-align: center;/*ブックマーク参照*/
+    user-select: none;/*要はコピーできなくするみたい*/
+}
+.answer {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;      /* 固定幅 */
+    height: 40px;     /* 固定高さ */
+
+    vertical-align: top;  /* 追加 */
+
+    font-weight: bold;
+    font-size: 15px;
+
+    color: #6091d3;
+    background: #FFF;
+    border: solid 3px #6091d3;
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+.select {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 0.5em 0.2em;
+    font-weight: bold;
+    font-size: 42px;
+    color: #6091d3;/*文字色*/
+    background: #FFF;/*背景色*/
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+.select:hover {/*「:hover」は疑似クラスの一種で、Webサイトの要素に追加しておくことで、カーソルを合わせた時に変化（アクション）をつけることができます*/
+    background: #333;/*背景色*/
+    border: 2px solid #333;
+    color: #fff;/*文字色*/
+    cursor: pointer;/*カーソルをポインターに変える*/
+}
+p {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    font-size: 40px;
+    color: #6091d3;/*文字色*/
+}
+#start:hover {
+    border: 2px solid #333;/*線*/
+    cursor: pointer;/*カーソルをポインターに変える*/
+}
+#btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.left-btn,
+.right-btn {
+    display: flex;
+    gap: 10px;
+}
+audio { width: 280px; height: 10px; margin: 0.1px;}
+
+.select.used{
+    visibility:hidden;
+}
