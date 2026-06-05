@@ -1,11 +1,28 @@
-<div id="start">
-    <p>正しい順序で、文字を軽くタッチしてください！</p>
-</div>
+<!DOCTYPE html>
+<html lang="ja">
 
-<div id="game">
-    <h1></h1>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>4文字並び替え</title>
+    <meta name="viewport"
+        content="width=320,
+      height=480,
+      initial-scale=1.0,
+      minimum-scale=1.0,
+      maximum-scale=2.0,
+      user-scalable=yes" />
+</head>
 
-    <div id="field">
+<body>
+    <div id="start">
+        <p>正しい順序で、文字を軽くタッチしてください！</p>
+    </div>
+
+    <div id="game">
+        <h1></h1>
+
+        <div id="field">
         <div id="answer-area">
             <div class="answer">1</div>
             <div class="answer">2</div>
@@ -21,22 +38,27 @@
         </div>
     </div>
 
-    <div id="btn">
-        <div class="left-btn">
-            <button onclick="Judgment()">OK</button>
-            <button onclick="showQuestion()">やり直す</button>
+
+        <div id="btn">
+            <div class="left-btn">
+                <button onclick="Judgment()">OK</button>
+                <button onclick="showQuestion()">やり直す</button>
+            </div>
+
+            <div class="right-btn">
+                <button onclick="showQuestion()">やり直す</button>
+                <button onclick="Judgment()">OK</button>
+            </div>
         </div>
 
-        <div class="right-btn">
-            <button onclick="showQuestion()">やり直す</button>
-            <button onclick="Judgment()">OK</button>
-        </div>
     </div>
-</div>
 
-<!-- ★これが絶対必要 -->
-<div id="next"></div>
+    <div id="next">
+    </div>
 
-<audio controls src="https://zukisuzukibgm.com/wp-content/uploads/2024/07/Easygoing.mp3"></audio>
+    <audio controls src="https://zukisuzukibgm.com/wp-content/uploads/2024/09/Try.mp3"></audio>
 
-<script src="main.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
