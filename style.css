@@ -29,15 +29,28 @@ body {
     box-sizing: border-box;
 }
 .select {
-    display: inline-block;
-    padding: 0.5em 1em;
-    margin: 0.5em 0.2em;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 150px;
+    height: 140px;
+
+    padding: 0;
+    margin: 0.2em 0.2em;
+
     font-weight: bold;
-    font-size: 42px;
-    color: #6091d3;/*文字色*/
-    background: #FFF;/*背景色*/
-    border: solid 3px #6091d3;/*線*/
-    border-radius: 10px;/*角の丸み*/
+    font-size: 125px;
+
+    color: #003366;
+    background: #FFFFFF;
+    border: solid 4px #003366;
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+    /* 文字を少し上にする */
+    padding-bottom: 15px;
 }
 .select:hover {/*「:hover」は疑似クラスの一種で、Webサイトの要素に追加しておくことで、カーソルを合わせた時に変化（アクション）をつけることができます*/
     background: #333;/*背景色*/
@@ -72,4 +85,17 @@ audio { width: 280px; height: 10px; margin: 0.1px;}
 
 .select.used{
     visibility:hidden;
+}
+
+/* 全画面表示ボタン */
+.fullscreen-button {
+    position: fixed;
+    top: 2px;
+    right: 2px;
+    z-index: 9999;
+
+    padding: 2px 4px;
+    font-size: 8px;
+    line-height: 1;
+    margin: 0;
 }
