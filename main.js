@@ -1423,3 +1423,71 @@ function nextquestion() {
         showQuestion();
     }
 }
+
+/* =========================
+   全画面表示・解除
+========================= */
+async function toggleFullscreen() {
+
+    try {
+
+        if (!document.fullscreenElement) {
+
+            await document.documentElement.requestFullscreen();
+
+        } else {
+
+            await document.exitFullscreen();
+
+        }
+
+    } catch (e) {
+
+        alert("全画面表示にできませんでした。");
+
+    }
+
+}
+
+
+/* =========================
+   全画面状態に合わせてボタン変更
+========================= */
+document.addEventListener("fullscreenchange", function() {
+
+    const btn = document.querySelector(".fullscreen-button");
+
+    if (!btn) return;
+
+    if (document.fullscreenElement) {
+        btn.textContent = "全画面解除 ↙";
+    } else {
+        btn.textContent = "全画面表示 ⛶";
+    }
+
+});
+/* =========================
+   ゲーム開始後はボタンを非表示
+========================= */
+const fullscreenBtn = document.querySelector(".fullscreen-button");
+
+const startScreen = document.querySelector("#start");
+
+const observer = new MutationObserver(function() {
+
+    if (startScreen.classList.contains("is-hidden")) {
+
+        fullscreenBtn.style.display = "none";
+
+    } else {
+
+        fullscreenBtn.style.display = "";
+
+    }
+
+});
+
+observer.observe(startScreen, {
+    attributes: true,
+    attributeFilter: ["class"]
+});
