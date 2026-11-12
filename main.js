@@ -1400,11 +1400,11 @@ function Judgment() {
 
     if (JSON.stringify(question[questionnum].a) === JSON.stringify(answers)) {
         next.innerHTML =
-            "<p style='font-size:3em;color:#008000;'>バッチリ😄　 です！</p>" +
+            "<p style='font-size:3.5em;color:#008000;'>バッチリ😄　 です！</p>" +
             "<button onclick='nextquestion()'>次に　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　進みます！</button>";
     } else {
         next.innerHTML =
-            "<p style='font-size:3em;color:#008080;'>オーケー😊　 です！</p>" +
+            "<p style='font-size:3.5em;color:#008080;'>オーケー😊　 です！</p>" +
             "<button onclick='nextquestion()'>次に　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　進みます！</button>";
     }
 }
