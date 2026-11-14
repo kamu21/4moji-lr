@@ -1,22 +1,22 @@
 div.is-hidden {
-    display: none;/*ウェブページでは「display: none」というCSSを使うと、要素を非表示にできます*/
+    display: none;
 }
 div.is-visible {
-    display: block;/*ブックマーク参照*/
+    display: block;
 }
 body {
-    text-align: center;/*ブックマーク参照*/
-    user-select: none;/*要はコピーできなくするみたい*/
+    text-align: center;
+    user-select: none;
 }
 .answer {
     display: inline-flex;
     justify-content: center;
     align-items: center;
 
-    width: 60px;      /* 固定幅 */
-    height: 40px;     /* 固定高さ */
+    width: 60px;      
+    height: 40px;     
 
-    vertical-align: top;  /* 追加 */
+    vertical-align: top;  
 
     font-weight: bold;
     font-size: 15px;
@@ -52,22 +52,22 @@ body {
     /* 文字を少し上にする */
     padding-bottom: 15px;
 }
-.select:hover {/*「:hover」は疑似クラスの一種で、Webサイトの要素に追加しておくことで、カーソルを合わせた時に変化（アクション）をつけることができます*/
-    background: #333;/*背景色*/
+.select:hover {
+    background: #333;
     border: 2px solid #333;
-    color: #fff;/*文字色*/
-    cursor: pointer;/*カーソルをポインターに変える*/
+    color: #fff;
+    cursor: pointer;
 }
 p {
     padding: 0.5em 1em;
     margin: 2em 0;
     font-weight: bold;
     font-size: 40px;
-    color: #6091d3;/*文字色*/
+    color: #6091d3;
 }
 #start:hover {
-    border: 2px solid #333;/*線*/
-    cursor: pointer;/*カーソルをポインターに変える*/
+    border: 2px solid #333;
+    cursor: pointer;
 }
 #btn {
     display: flex;
@@ -127,4 +127,9 @@ h1 {
     margin-bottom: 0;
     line-height: 1.8;
     padding-top: 5px;
+}
+/* audioの再生時間・残り時間を非表示 */
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    display: none;
 }
