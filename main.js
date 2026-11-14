@@ -1321,7 +1321,7 @@ function gamestart() {
     showQuestion();
 }
 
-//シャッフル（正しい版）
+//シャッフル
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -1391,22 +1391,34 @@ function showQuestion() {
     }
 }
 
-//判定
+// 正解かどうか判定
 function Judgment() {
-
-    next.innerHTML = "";
 
     changescene(scecegame, next);
 
-    if (JSON.stringify(question[questionnum].a) === JSON.stringify(answers)) {
-        next.innerHTML =
-            "<p style='font-size:3.5em;color:#008000;'>バッチリ😄　 です！</p>" +
-            "<button onclick='nextquestion()'>次に　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　進みます！</button>";
-    } else {
-        next.innerHTML =
-            "<p style='font-size:3.5em;color:#008080;'>オーケー😊　 です！</p>" +
-            "<button onclick='nextquestion()'>次に　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　進みます！</button>";
-    }
+    const isCorrect =
+        JSON.stringify(question[questionnum].a) ===
+        JSON.stringify(answers);
+
+    // メッセージ作成
+    const p = document.createElement("p");
+
+    p.style.fontSize = "3.5em";
+    p.style.color = isCorrect ? "#008000" : "#008080";
+
+    p.textContent = isCorrect
+        ? "バッチリ😄　です！"
+        : "オーケー😊　です！";
+
+    // 次へ進むボタン作成
+    const button = document.createElement("button");
+
+    button.textContent = "次に　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　進みます！";
+
+    button.addEventListener("click", nextquestion);
+
+    // 表示内容を入れ替える
+    next.replaceChildren(p, button);
 }
 
 //次へ
